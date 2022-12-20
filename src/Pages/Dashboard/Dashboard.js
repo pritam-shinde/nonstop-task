@@ -34,16 +34,16 @@ const Dashboard = ({ team }) => {
 
 
     const getTask = async () => {
-        await fetch("https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/task").then(res => res.json()).then(data => setTaskData(data))
+        await fetch("https://nonstop-task-api.vercel.app/task").then(res => res.json()).then(data => setTaskData(data))
     }
 
     const getList = async () => {
-        let res = await fetch(`https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/list/?team=${team}`).then(res => res.json()).then(data => setTaskList(data)).catch(error => console.log(error))
+        let res = await fetch(`https://nonstop-task-api.vercel.app/list/?team=${team}`).then(res => res.json()).then(data => setTaskList(data)).catch(error => console.log(error))
     }
 
     const addNewTask = async (task) => {
         console.log(task)
-        let res = await fetch("https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/task", {
+        let res = await fetch("https://nonstop-task-api.vercel.app/task", {
             method: "POST",
             body: JSON.stringify(task),
             headers: {
@@ -54,7 +54,7 @@ const Dashboard = ({ team }) => {
 
     const addNewList = async (list) => {
         console.log(list)
-        const res = await fetch("https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/list", {
+        const res = await fetch("https://nonstop-task-api.vercel.app/list", {
             method: "POST",
             body: JSON.stringify(list),
             headers: {
@@ -64,7 +64,7 @@ const Dashboard = ({ team }) => {
     }
 
     const handleDeleteTask = async (card) => {
-        let res = await fetch(`https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/task/${card.id}`, {
+        let res = await fetch(`https://nonstop-task-api.vercel.app/task/${card.id}`, {
             method: "DELETE",
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -73,11 +73,11 @@ const Dashboard = ({ team }) => {
     }
 
     const getAllTeamMember = async () => {
-        await fetch(`https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/profile/?team=${team}`).then(res => res.json()).then(data => setAllTeamMember(data)).catch(error => console.log(error))
+        await fetch(`hhttps://nonstop-task-api.vercel.app/profile/?team=${team}`).then(res => res.json()).then(data => setAllTeamMember(data)).catch(error => console.log(error))
     }
 
     const showIndividual = async (user) => {
-        await fetch(`https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/task/?assign=${user}`).then(res => res.json()).then(data => setTaskData(data)).catch(error => console.log(error));
+        await fetch(`https://nonstop-task-api.vercel.app/task/?assign=${user}`).then(res => res.json()).then(data => setTaskData(data)).catch(error => console.log(error));
         setIsShowIndividualTask(false)
     }
 

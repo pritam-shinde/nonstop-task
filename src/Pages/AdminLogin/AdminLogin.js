@@ -46,7 +46,7 @@ const AdminLogin = () => {
     }
 
     const validLogin = async ({ email, password }) => {
-        let response = await fetch(`https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/admin/?adminEmail=${email}`, {
+        let response = await fetch(`https://nonstop-task-api.vercel.app/admin/?adminEmail=${email}`, {
             method:"GET",
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',

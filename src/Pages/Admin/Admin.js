@@ -52,7 +52,7 @@ const Admin = () => {
     }
 
     const handleDeleteUser = async (userId) => {
-        let response = await fetch(`https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/profile/${userId}`, {
+        let response = await fetch(`https://nonstop-task-api.vercel.app/profile/${userId}`, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -61,7 +61,7 @@ const Admin = () => {
     }
 
     const handleDeleteAdmin = async (adminId) => {
-        let response = await fetch(`https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/admin/${adminId}`, {
+        let response = await fetch(`https://nonstop-task-api.vercel.app/admin/${adminId}`, {
             method: "DELETE",
             eaders: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -70,7 +70,7 @@ const Admin = () => {
     }
 
     const getMembers = async () => {
-        let res = await fetch("https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/profile", {
+        let res = await fetch("https://nonstop-task-api.vercel.app/profile", {
             method: "GET",
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -79,7 +79,7 @@ const Admin = () => {
     }
 
     const getAdmin = async () => {
-        let res = await fetch("https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/admin", {
+        let res = await fetch("https://nonstop-task-api.vercel.app/admin", {
             method: "GET",
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',

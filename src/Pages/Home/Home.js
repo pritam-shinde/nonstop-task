@@ -50,7 +50,7 @@ const Home = () => {
     }
 
     const validLogin = async ({ email, password }) => {
-        let response = await fetch(`https://my-json-server.typicode.com/pritam-shinde/nonstop-task-api/profile/?email=${email}`).then(res=> res.json()).then(data=> data.length === 1 ? setUser(data) : alert("User is not exist...!"))
+        let response = await fetch(`https://nonstop-task-api.vercel.app/profile/?email=${email}`).then(res=> res.json()).then(data=> data.length === 1 ? setUser(data) : alert("User is not exist...!"))
 
         validateLoginDetails(email, password);
     }
