@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAA;EACZ,gBAAgB,EAAE,kBAAkB;CACvC",
+    "sources": [
+        "AppDrawer.scss"
+    ],
+    "names": [],
+    "file": "AppDrawer.css"
+}
